@@ -152,7 +152,7 @@ display:none;
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
             <h2 class="text-center text-success"><?= $result; ?></h2><br>
-          <h1 class="text-uppercase text-white font-weight-bold">Web Developer</h1>
+          <h2 class="text-uppercase text-white font-weight-bold">Front End Developer</h2>
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
@@ -467,7 +467,7 @@ display:none;
   <!-- Call to Action Section -->
   <section class="page-section bg-dark text-white">
     <div class="container text-center">
-      <h2 class="text-center mt-0">Code Sample, this was built using PHP and JSON</h2>
+      <h2 class="text-center mt-0">Code Sample from santannanergyservices, this was built using PHP, JSON and the Swagger API portal</h2>
       <hr class="divider my-4">
       <div class="row">
         <div class="col-lg-4"><h2 class="text-center mt-0">Get JSON PHP</h2>
