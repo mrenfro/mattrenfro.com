@@ -156,7 +156,7 @@ display:none;
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">This site is built with Bootstrap, SCSS, jQuery, with some custom JSON and PHP. <br>I have experience in, Web Development, Web Design, WordPress, Drupal and other CMS platforms, as well as SEO, Digital Marketing & Graphic Design. My focus has been on front end web development, mobile first and responsive design.</p>
+          <p class="text-white-75 font-weight-light mb-5">This site is built with Bootstrap, SCSS, jQuery, with some custom JSON and PHP. <br>I have experience in, Web Development, Web Design, WordPress, Drupal and other CMS platforms, as well as SEO, Digital Marketing & Graphic Design. My focus has been on front end web development, mobile first and responsive design.My <a href="https://github.com/mrenfro/mattrenfro.com">github</a></p>
           <a class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Brief Overview</a>
         </div>
       </div>
