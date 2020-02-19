@@ -156,7 +156,7 @@ display:none;
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">This site is built with Bootstrap, SCSS and jQuery. <br>I have experience in, Web Development, Web Design, WordPress, Drupal and other CMS platforms, as well as SEO, Digital Marketing & Graphic Design. My focus has been on front end web development, mobile first and responsive design.</p>
+          <p class="text-white-75 font-weight-light mb-5">This site is built with Bootstrap, SCSS, jQuery, with some custom JSON and PHP. <br>I have experience in, Web Development, Web Design, WordPress, Drupal and other CMS platforms, as well as SEO, Digital Marketing & Graphic Design. My focus has been on front end web development, mobile first and responsive design.</p>
           <a class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Brief Overview</a>
         </div>
       </div>
@@ -373,8 +373,55 @@ display:none;
 
   <!-- Portfolio Section -->
   <section id="portfolio">
+    <h2 class="text-center mt-0">Featured Latest Work</h2>
+    <hr class="divider my-4">
+    <br>
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+    <div class="col-lg-4 col-sm-3">
+      <a class="portfolio-box" href="img/ses_desktop.jpg">
+        <img class="img-fluid" src="img/ses_desktop_sm.jpg" alt="">
+        <div class="portfolio-box-caption">
 
-    <h2 class="text-center mt-0">Web Portfolio</h2>
+          <div class="project-category text-white-50">
+            website
+          </div>
+          <div class="project-name">
+            Santanna Energy Service - WordPress Desktop
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-4 col-sm-3">
+      <a class="portfolio-box" href="img/ses_tablet.jpg">
+        <img class="img-fluid" src="img/ses_tablet_sm.jpg" alt="">
+        <div class="portfolio-box-caption">
+
+          <div class="project-category text-white-50">
+            website
+          </div>
+          <div class="project-name">
+            Santanna Energy Service - WordPress Tablet
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+      <a class="portfolio-box" href="img/ses_mobile.jpg">
+        <img class="img-fluid" src="img/ses_mobile_sm.jpg" alt="">
+        <div class="portfolio-box-caption">
+
+          <div class="project-category text-white-50">
+            website
+          </div>
+          <div class="project-name">
+            Santanna Energy Service - WordPress mobile
+          </div>
+        </div>
+      </a>
+    </div></div></div>
+
+    <h2 class="text-center mt-0">Web Dev Portfolio</h2>
     <hr class="divider my-4">
     <br>
 
