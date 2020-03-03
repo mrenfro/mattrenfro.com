@@ -55,7 +55,64 @@ curl_close($curl_handle);
 
 
 ?>
+<?php
 
+//$curl_handle=curl_init();
+$curl_handle = curl_init($url);
+curl_setopt($curl_handle, CURLOPT_URL,'https://mattrenfro.com/productSearchgas.php?utilityCode=NICILG&stateCode=IL&customerTypeCode=R&serviceTypeCode=G&salesChannelCode=WEB&contractSourceCode=MM');
+//Set the GET method by giving 0 value and for POST set as 1
+//curl_setopt($curl_handle, CURLOPT_POST, 0);
+//curl_setopt($curl_handle, CURLOPT_CUSTOMREQUEST, "GET");
+//curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+//curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $payload);
+curl_setopt($curl_handle, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));  //set the content type to application/json
+curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
+$query = curl_exec($curl_handle);
+$resultnicor6 = json_decode($query, true);
+curl_close($curl_handle);
+//close cURL resource
+
+//$json_a = json_decode($result);
+//print_r($result);
+//print complete object, just echo the variable not work so you need to use print_r to show the result
+
+//echo  $result[0]["productCode"];
+//Inside the second layer
+//echo $model["data"][0]["companyName"];
+
+
+
+?>
+<?php
+
+//$curl_handle=curl_init();
+$curl_handle = curl_init($url);
+curl_setopt($curl_handle, CURLOPT_URL,'https://mattrenfro.com/productSearchgas.php?utilityCode=NICILG&stateCode=IL&customerTypeCode=R&serviceTypeCode=G&salesChannelCode=WEB&contractSourceCode=MM');
+//Set the GET method by giving 0 value and for POST set as 1
+//curl_setopt($curl_handle, CURLOPT_POST, 0);
+//curl_setopt($curl_handle, CURLOPT_CUSTOMREQUEST, "GET");
+//curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+//curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($curl_handle, CURLOPT_POSTFIELDS, $payload);
+curl_setopt($curl_handle, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));  //set the content type to application/json
+curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
+$query = curl_exec($curl_handle);
+$resultnicor12 = json_decode($query, true);
+curl_close($curl_handle);
+//close cURL resource
+
+//$json_a = json_decode($result);
+//print_r($result);
+//print complete object, just echo the variable not work so you need to use print_r to show the result
+
+//echo  $result[0]["productCode"];
+//Inside the second layer
+//echo $model["data"][0]["companyName"];
+
+
+
+?>
 <html lang="en">
 
 <head>
@@ -85,7 +142,7 @@ curl_close($curl_handle);
   -webkit-box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
   -moz-box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
   box-shadow: 1px 2px 11px -1px rgba(0,0,0,0.75);
-  width:400px;
+  width:350px;
   background-color: #fff;
   color:#999;
   text-align: center;
@@ -115,7 +172,91 @@ display:none;
 
   }
 }
+.checkbox {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox > span {
+    color: #fff;
+    padding: 0.5rem 0.25rem;
+}
+
+.checkbox > input {
+    height: 25px;
+    width: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid #34495E;
+    border-radius: 4px;
+    outline: none;
+    transition-duration: 0.3s;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+
+.checkbox > input:checked {
+    border: 1px solid #FFFFFF;
+    background-color: #F7600F;
+}
+
+.checkbox > input:checked + span::before {
+    content: '\2713';
+    display: block;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left: 0.7rem;
+    top: 0.2rem;
+}
+
+.checkbox > input:active {
+    border: 2px solid #34495E;
+}
+#myTable{
+    width:95%;
+}
+.td{
+    width:95%;
+}
+.tr{
+   width:95%;
+}
 </style>
+<script type="text/javascript">
+function hideSelected() {
+	var oTable = document.getElementById("myTable");
+	var oCol = oTable.getElementsByTagName("td");
+
+	for( var i=0; i < oCol.length; i++ ) {
+		var oInputs = oCol[i].getElementsByTagName("input");
+		for( var j=0; j < oInputs.length; j++ ) {
+			if( oInputs[j].name == "showHide" ) {
+				if(!oInputs[j].checked ) {
+					oCol[i].style.display = "none";
+				}
+				break;
+			}
+		}
+	}
+
+}
+
+function showAll() {
+	var oTable = document.getElementById("myTable");
+	var oCol = oTable.getElementsByTagName("td");
+
+	for( var i=0; i < oCol.length; i++ ) {
+		if( oCol[i].style.display == "none" ) {
+			oCol[i].style.display = "";
+		}
+	}
+
+}
+</script>
 </head>
 
 <body id="page-top">
@@ -156,7 +297,7 @@ display:none;
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">This site is built with Bootstrap, SCSS, jQuery, with some custom JSON and PHP. <br>I have experience in, Web Development, Web Design, WordPress, Drupal and other CMS platforms, as well as SEO, Digital Marketing & Graphic Design. My focus has been on front end web development, mobile first and responsive design.My <a href="https://github.com/mrenfro/mattrenfro.com">github</a></p>
+          <p class="text-white-75 font-weight-light mb-5">This site is built with Bootstrap, SCSS, jQuery, with some custom JSON and PHP. <br>I have experience in, Web Development, Web Design, WordPress, Drupal and other CMS platforms, as well as SEO, Digital Marketing & Graphic Design. My focus has been on front end web development, mobile first and responsive design.<br>My <a href="https://github.com/mrenfro">github</a></p>
           <a class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Brief Overview</a>
         </div>
       </div>
@@ -517,7 +658,7 @@ display:none;
       <h2 class="text-center mt-0">Code Sample from santannanergyservices, this was built using PHP, JSON and the Swagger API portal</h2>
       <hr class="divider my-4">
       <div class="row">
-        <div class="col-lg-4"><h2 class="text-center mt-0">Get JSON PHP</h2>
+        <div class="col-lg-3"><h2 class="text-center mt-0">Get JSON PHP</h2>
           <code class="text-white">
 <p class="text-left mt-0">$curl_handle = curl_init($url);
 curl_setopt($curl_handle, CURLOPT_URL,'https://jsonurl');
@@ -528,7 +669,7 @@ $query = curl_exec($curl_handle);
 $resultnicor3 = json_decode($query, true);
 curl_close($curl_handle);</p>
           </code></div>
-        <div class="col-lg-4">
+        <div class="col-lg-3">
           <h2 class="text-center mt-0">Display JSON PHP</h2>
           <code class="text-white">
             <br>
@@ -572,7 +713,7 @@ curl_close($curl_handle);</p>
                 //at first layer ?>
                 <br></p>
           </code></div>
-        <div class="col-lg-4">
+        <div class="col-lg-3">
             <h2 class="text-center mt-0">My css</h2>
             <code class="text-white">
               <br>
@@ -596,65 +737,180 @@ curl_close($curl_handle);</p>
                 text-size-adjust: auto;
               }</p>
 </code></div>
+<div class="col-lg-3">
+    <h2 class="text-center mt-0">Compare Javascript</h2>
+    <code class="text-white">
+      <br>
+      <p class="text-left mt-0">
+        function hideSelected() {
+        	var oTable = document.getElementById("myTable");
+        	var oCol = oTable.getElementsByTagName("td");
+
+        	for( var i=0; i < oCol.length; i++ ) {
+        		var oInputs = oCol[i].getElementsByTagName("input");
+        		for( var j=0; j < oInputs.length; j++ ) {
+        			if( oInputs[j].name == "showHide" ) {
+        				if(!oInputs[j].checked ) {
+        					oCol[i].style.display = "none";
+        				}
+        				break;
+        			}
+        		}
+        	}
+
+        }
+
+        function showAll() {
+        	var oTable = document.getElementById("myTable");
+        	var oCol = oTable.getElementsByTagName("td");
+
+        	for( var i=0; i < oCol.length; i++ ) {
+        		if( oCol[i].style.display == "none" ) {
+        			oCol[i].style.display = "";
+        		}
+        	}
+
+        }
+}</p>
+</code></div>
       </div>
 </div>
-<h2 class="text-center">Result</h2>
-
+<h2 class="text-center">Result with new compare script</h2>
 <div align="center">
+<input type="button" value="Compare Selected Plan" onclick="hideSelected();" /> <input type="button" value="Show All" onclick="showAll();" /></div>
+<br><br>
+<table id="myTable">
+	<tr>
+	<td>
+<div class="row justify-content-md-center">
+        <div class="col-md-3">
+          <label class="checkbox"><input  type="checkbox" name="showHide" /></label><div align="center">
+        </div>
+        <div class="col-md-3">
+          <div id="rate-box">
 
-<div id="rate-box">
+          <?php
 
-<?php
+          echo '<div class="h2">';
+          print_r( $resultnicor3[model][7]["rateScheduleList"][0]["utility"]);echo '</div>';
+            echo "<br>";
+            echo '<div class="center">';
+          print_r( $resultnicor3[model][7]["productTerm"]);
+          echo "<br>";
+          print_r( $resultnicor3[model][7]["rateScheduleList"][0]["market"]);
+          echo"<br>";
+          print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["chargeType"]);
+          echo"<br>";
+          echo"&#162;";
+          print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["rateAmount"]);
+            echo "&nbsp;per&nbsp;";
+            print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["uom"]);
+            echo "<br>";
+          print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateCalculator"]);
+          echo"<br>";echo"&nbsp;$";
+          print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateAmount"]);echo '</div>';
+            //at first layer ?>
+            <br>
+          <a class="btn btn-primary" href="#" role="button">Select Plan</a><a  href="">
+          </div>
+        </div>
 
-echo '<div class="h2">';
-print_r( $resultnicor3[model][7]["rateScheduleList"][0]["utility"]);echo '</div>';
-  echo "<br>";
-  echo '<div class="center">';
-print_r( $resultnicor3[model][7]["productTerm"]);
-echo "<br>";
-print_r( $resultnicor3[model][7]["rateScheduleList"][0]["market"]);
-echo"<br>";
-print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["chargeType"]);
-echo"<br>";
-echo"&#162;";
-print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["rateAmount"]);
-  echo "&nbsp;per&nbsp;";
-  print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["uom"]);
-  echo "<br>";
-print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateCalculator"]);
-echo"<br>";echo"&nbsp;$";
-print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateAmount"]);echo '</div>';
-  //at first layer ?>
-  <br>
-<a class="btn btn-primary" href="#" role="button">Select Plan</a><a  href="">
+      </div>
+
+
+
+
+  </div> </td>
+  <td>
+    <div class="row justify-content-md-center">
+      <div class="col-md-3">
+        <label class="checkbox"><input  type="checkbox" name="showHide" /></label><div align="center">
+      </div>
+      <div class="col-md-3">
+        <div id="rate-box">
+
+        <?php
+
+        echo '<div class="h2">';
+        print_r( $resultnicor6[model][8]["rateScheduleList"][0]["utility"]);echo '</div>';
+          echo "<br>";
+          echo '<div class="center">';
+        print_r( $resultnicor6[model][8]["productTerm"]);
+        echo "<br>";
+        print_r( $resultnicor6[model][8]["rateScheduleList"][0]["market"]);
+        echo"<br>";
+        print_r( $resultnicor6[model][8]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["chargeType"]);
+        echo"<br>";
+        echo"&#162;";
+        print_r( $resultnicor6[model][8]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["rateAmount"]);
+          echo "&nbsp;per&nbsp;";
+          print_r( $resultnicor6[model][8]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["uom"]);
+          echo "<br>";
+        print_r( $resultnicor6[model][8]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateCalculator"]);
+        echo"<br>";echo"&nbsp;$";
+        print_r( $resultnicor6[model][8]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateAmount"]);echo '</div>';
+          //at first layer ?>
+          <br>
+        <a class="btn btn-primary" href="#" role="button">Select Plan</a><a  href="">
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+</div> </td>
+<td>
+<div class="row justify-content-md-center">
+    <div class="col-md-3">
+      <label class="checkbox"><input  type="checkbox" name="showHide" /></label><div align="center">
+    </div>
+    <div class="col-md-3">
+      <div id="rate-box">
+
+      <?php
+
+      echo '<div class="h2">';
+      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["utility"]);echo '</div>';
+        echo "<br>";
+        echo '<div class="center">';
+      print_r( $resultnicor12[model][6]["productTerm"]);
+      echo "<br>";
+      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["market"]);
+      echo"<br>";
+      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["chargeType"]);
+      echo"<br>";
+      echo"&#162;";
+      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["rateAmount"]);
+        echo "&nbsp;per&nbsp;";
+        print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["uom"]);
+        echo "<br>";
+      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateCalculator"]);
+      echo"<br>";echo"&nbsp;$";
+      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateAmount"]);echo '</div>';
+        //at first layer ?>
+        <br>
+      <a class="btn btn-primary" href="#" role="button">Select Plan</a><a  href="">
+      </div>
+    </div>
+
+  </div>
+
+
+
+
 </div>
-</div><br>
+</td>
+	</tr>
+
+
+
+</table>
+</div></div>
 
 <div align="center">
-  <table class="table table-bordered">
 
-  <thead>
-    <tr>
-      <th>LCD</th>
-      <th>Term</th>
-      <th>State</th>
-      <th>Rate</th>
-      <th>Service Fee</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><?php echo '<div class="">';
-      print_r( $resultnicor3[model][7]["rateScheduleList"][0]["utility"]);echo '</div>';?></td>
-      <td><?php print_r( $resultnicor3[model][7]["productTerm"]);?></td>
-      <td><?php  print_r( $resultnicor3[model][7]["rateScheduleList"][0]["market"]);?></td>
-      <td><?php  echo"&#162;"; print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["rateAmount"]);
-      echo "&nbsp;per&nbsp;"; print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["uom"]);?></td>
-      <td><?php echo"&nbsp;$"; print_r( $resultnicor3[model][7]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateAmount"]);echo '</div>';?></td>
-    <td style="text-align:center;"><a class="btn btn-primary" href="#" role="button">Select Plan</a><a  href=""></td>
-    </tr>
-  </table>
   </section>
 </div>
 
