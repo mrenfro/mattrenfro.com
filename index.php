@@ -219,24 +219,43 @@ display:none;
 #myTable{
     width:95%;
 }
+.tr{
+   width:95%;
+}
 .td{
     width:95%;
 }
-.tr{
-   width:95%;
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #cccccc;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }
 </style>
 <script type="text/javascript">
 function hideSelected() {
 	var oTable = document.getElementById("myTable");
-	var oCol = oTable.getElementsByTagName("td");
+	var oRows = oTable.getElementsByTagName("tr");
 
-	for( var i=0; i < oCol.length; i++ ) {
-		var oInputs = oCol[i].getElementsByTagName("input");
+	for( var i=0; i < oRows.length; i++ ) {
+		var oInputs = oRows[i].getElementsByTagName("input");
 		for( var j=0; j < oInputs.length; j++ ) {
 			if( oInputs[j].name == "showHide" ) {
 				if(!oInputs[j].checked ) {
-					oCol[i].style.display = "none";
+					oRows[i].style.display = "none";
 				}
 				break;
 			}
@@ -247,11 +266,11 @@ function hideSelected() {
 
 function showAll() {
 	var oTable = document.getElementById("myTable");
-	var oCol = oTable.getElementsByTagName("td");
+	var oRows = oTable.getElementsByTagName("tr");
 
-	for( var i=0; i < oCol.length; i++ ) {
-		if( oCol[i].style.display == "none" ) {
-			oCol[i].style.display = "";
+	for( var i=0; i < oRows.length; i++ ) {
+		if( oRows[i].style.display == "none" ) {
+			oRows[i].style.display = "";
 		}
 	}
 
@@ -260,7 +279,8 @@ function showAll() {
 </head>
 
 <body id="page-top">
-
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i>
+</button>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
@@ -293,7 +313,8 @@ function showAll() {
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
             <h2 class="text-center text-success"><?= $result; ?></h2><br>
-          <h2 class="text-uppercase text-white font-weight-bold">Front End Developer</h2>
+          <h2 class="text-uppercase text-white font-weight-bold">Web Developer - ATX</h2>
+          <img src="img/me.jpg" class="rounded-circle" alt="matt renfro" width="125" height="125">
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
@@ -311,7 +332,7 @@ function showAll() {
         <div class="col-lg-8 text-center">
           <h2 class="text-white mt-0">Summary</h2>
           <hr class="divider light my-4">
-          <p class="text-white-50 mb-4">During my career as a web developer for 10+ yrs. now.<br> I have built and maintained many corporate websites. I design and code custom themeing for various CMS's mostly in WordPress. I have also coded a lot of various other web properties using Libraries and Frameworks like Bootstrap from start to finish. </p>
+          <p class="text-white-50 mb-4">During my career as a web developer for 10+ yrs.<br> I have built and maintained many corporate websites. I design and code custom UI/UX and themeing for various CMS's mostly in WordPress. I have also built custom UI/UX for many other web properties using Libraries and Frameworks like Bootstrap and JQuery from start to finish. </p>
 
           <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Learn More</a>
         </div>
@@ -329,7 +350,7 @@ function showAll() {
           <div class="mt-5">
             <i class="fas fa-4x fa-code text-secondary mb-4"></i>
             <h3 class="h4 mb-2">Web Development</h3>
-            <p class="text-muted mb-0">I have built data-driven mobile first and responsive websites. I use a process in which the structure, layout, and functionality of a website is considered, based on actual usage and site analytics.
+            <p class="text-muted mb-0">I have built and designed many data-driven, mobile first and responsive websites and apps. I use a process in which the structure, layout, and functionality of a website is considered, based on actual usage and site analytics.
               </p>
           </div>
         </div>
@@ -743,34 +764,33 @@ curl_close($curl_handle);</p>
       <br>
       <p class="text-left mt-0">
         function hideSelected() {
-        	var oTable = document.getElementById("myTable");
-        	var oCol = oTable.getElementsByTagName("td");
+	var oTable = document.getElementById("myTable");
+	var oRows = oTable.getElementsByTagName("tr");
 
-        	for( var i=0; i < oCol.length; i++ ) {
-        		var oInputs = oCol[i].getElementsByTagName("input");
-        		for( var j=0; j < oInputs.length; j++ ) {
-        			if( oInputs[j].name == "showHide" ) {
-        				if(!oInputs[j].checked ) {
-        					oCol[i].style.display = "none";
-        				}
-        				break;
-        			}
-        		}
-        	}
+	for( var i=0; i < oRows.length; i++ ) {
+		var oInputs = oRows[i].getElementsByTagName("input");
+		for( var j=0; j < oInputs.length; j++ ) {
+			if( oInputs[j].name == "showHide" ) {
+				if(!oInputs[j].checked ) {
+					oRows[i].style.display = "none";
+				}
+				break;
+			}
+		}
+	}
 
-        }
+}
 
-        function showAll() {
-        	var oTable = document.getElementById("myTable");
-        	var oCol = oTable.getElementsByTagName("td");
+function showAll() {
+	var oTable = document.getElementById("myTable");
+	var oRows = oTable.getElementsByTagName("tr");
 
-        	for( var i=0; i < oCol.length; i++ ) {
-        		if( oCol[i].style.display == "none" ) {
-        			oCol[i].style.display = "";
-        		}
-        	}
+	for( var i=0; i < oRows.length; i++ ) {
+		if( oRows[i].style.display == "none" ) {
+			oRows[i].style.display = "";
+		}
+	}
 
-        }
 }</p>
 </code></div>
       </div>
@@ -780,7 +800,11 @@ curl_close($curl_handle);</p>
 <input type="button" value="Compare Selected Plan" onclick="hideSelected();" /> <input type="button" value="Show All" onclick="showAll();" /></div>
 <br><br>
 <table id="myTable">
+
 	<tr>
+	<td >
+
+</td>
 	<td>
 <div class="row justify-content-md-center">
         <div class="col-md-3">
@@ -821,8 +845,13 @@ curl_close($curl_handle);</p>
 
 
   </div> </td>
-  <td>
-    <div class="row justify-content-md-center">
+	</tr>
+
+	<tr>
+	<td >
+
+	</td>
+	<td><div class="row justify-content-md-center">
       <div class="col-md-3">
         <label class="checkbox"><input  type="checkbox" name="showHide" /></label><div align="center">
       </div>
@@ -861,50 +890,50 @@ curl_close($curl_handle);</p>
 
 
 </div> </td>
-<td>
-<div class="row justify-content-md-center">
-    <div class="col-md-3">
-      <label class="checkbox"><input  type="checkbox" name="showHide" /></label><div align="center">
-    </div>
-    <div class="col-md-3">
-      <div id="rate-box">
-
-      <?php
-
-      echo '<div class="h2">';
-      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["utility"]);echo '</div>';
-        echo "<br>";
-        echo '<div class="center">';
-      print_r( $resultnicor12[model][6]["productTerm"]);
-      echo "<br>";
-      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["market"]);
-      echo"<br>";
-      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["chargeType"]);
-      echo"<br>";
-      echo"&#162;";
-      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["rateAmount"]);
-        echo "&nbsp;per&nbsp;";
-        print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["uom"]);
-        echo "<br>";
-      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateCalculator"]);
-      echo"<br>";echo"&nbsp;$";
-      print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateAmount"]);echo '</div>';
-        //at first layer ?>
-        <br>
-      <a class="btn btn-primary" href="#" role="button">Select Plan</a><a  href="">
-      </div>
-    </div>
-
-  </div>
-
-
-
-
-</div>
-</td>
 	</tr>
+	<tr>
+	<td>
+
+	<td><div class="row justify-content-md-center">
+      <div class="col-md-3">
+        <label class="checkbox"><input  type="checkbox" name="showHide" /></label><div align="center">
+      </div>
+      <div class="col-md-3">
+        <div id="rate-box">
+
+        <?php
+
+        echo '<div class="h2">';
+        print_r( $resultnicor12[model][6]["rateScheduleList"][0]["utility"]);echo '</div>';
+          echo "<br>";
+          echo '<div class="center">';
+        print_r( $resultnicor12[model][6]["productTerm"]);
+        echo "<br>";
+        print_r( $resultnicor12[model][6]["rateScheduleList"][0]["market"]);
+        echo"<br>";
+        print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["chargeType"]);
+        echo"<br>";
+        echo"&#162;";
+        print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["rateAmount"]);
+          echo "&nbsp;per&nbsp;";
+          print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][0]["uom"]);
+          echo "<br>";
+        print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateCalculator"]);
+        echo"<br>";echo"&nbsp;$";
+        print_r( $resultnicor12[model][6]["rateScheduleList"][0]["rateSegmentList"][0]["rateSegmentDetailList"][1]["rateAmount"]);echo '</div>';
+          //at first layer ?>
+          <br>
+        <a class="btn btn-primary" href="#" role="button">Select Plan</a><a  href="">
+        </div>
+      </div>
+
+    </div>
 
 
+
+
+</div> </td>
+	</tr>
 
 </table>
 </div></div>
@@ -990,6 +1019,27 @@ curl_close($curl_handle);</p>
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
 
+  <script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
 </body>
 
 </html>
