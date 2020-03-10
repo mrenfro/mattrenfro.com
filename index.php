@@ -313,13 +313,15 @@ function showAll() {
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
             <h2 class="text-center text-success"><?= $result; ?></h2><br>
-          <h2 class="text-uppercase text-white font-weight-bold">Web Developer - ATX</h2>
-          <img src="img/me.jpg" class="rounded-circle" alt="matt renfro" width="125" height="125">
+          <h2 class="text-uppercase text-white font-weight-bold">Web UX/UI Designer and Developer</h2>
+          <img src="img/me.png" class="rounded-circle" alt="matt renfro" width="125" height="125">
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">This site is built with Bootstrap, SCSS, jQuery, with some custom JSON and PHP. <br>I have experience in, Web Development, Web Design, WordPress, Drupal and other CMS platforms, as well as SEO, Digital Marketing & Graphic Design. My focus has been on front end web development, mobile first and responsive design.<br>My <a href="https://github.com/mrenfro">github</a></p>
-          <a class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Brief Overview</a>
+          <p class="text-white-75 font-weight-light mb-5">This site is built with Bootstrap, SCSS, jQuery, JSON and PHP.
+
+            </p>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="#about"><i class="fas fa-angle-down"></i> Brief Overview</a>
         </div>
       </div>
     </div>
@@ -332,9 +334,14 @@ function showAll() {
         <div class="col-lg-8 text-center">
           <h2 class="text-white mt-0">Summary</h2>
           <hr class="divider light my-4">
-          <p class="text-white-50 mb-4">During my career as a web developer for 10+ yrs.<br> I have built and maintained many corporate websites. I design and code custom UI/UX and themeing for various CMS's mostly in WordPress. I have also built custom UI/UX for many other web properties using Libraries and Frameworks like Bootstrap and JQuery from start to finish. </p>
+          <p class="text-white-75 mb-5">During my career for 10+ yrs. now
+            I have Designed, Developed and maintained many B2B and B2C corporate websites and applications.
+            I have experience in, Web Development, Web Design, WordPress, Drupal and other CMS platforms.
+            I am also well versed in Best SEO, Digital Marketing & Graphic Design principles.
+            My focus has been on front end UI/UX and themeing and web development, for mobile first and responsive design.
+          </p>
 
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Learn More</a>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="#services"><i class="fas fa-angle-down"></i> Experience</a>
         </div>
       </div>
     </div>
@@ -350,7 +357,7 @@ function showAll() {
           <div class="mt-5">
             <i class="fas fa-4x fa-code text-secondary mb-4"></i>
             <h3 class="h4 mb-2">Web Development</h3>
-            <p class="text-muted mb-0">I have built and designed many data-driven, mobile first and responsive websites and apps. I use a process in which the structure, layout, and functionality of a website is considered, based on actual usage and site analytics.
+            <p class="text-muted mb-0">I have built and designed many UX/UI web applications, mobile first and responsive websites and apps. I use a process in which the structure, layout, and functionality of a website is considered, based on actual usage and site analytics.
               </p>
           </div>
         </div>
@@ -377,6 +384,21 @@ function showAll() {
         </div>
       </div>
       <br><br>
+      <div align="center">
+              <div class="row">
+
+          <div class="col-sm">
+            <a style="margin-bottom:5px;" class="btn btn-secondary btn-xl js-scroll-trigger text-center" href="/MattRenfro-2020.pdf"><i class="fas fa-download"></i> Download Resume PDF</a>
+          </div>
+          <div class="col-sm">
+            <a style="margin-bottom:5px;" class="btn btn-secondary btn-xl js-scroll-trigger text-center" href="#portfolio"><i class="fas fa-laptop"></i> Design Portfolio</a>
+          </div>
+          <div class="col-sm">
+            <a class="btn btn-secondary btn-xl js-scroll-trigger text-center" href="#code"><i class="fas fa-laptop-code"></i> Code Sample Portfolio</a>
+          </div></div>
+        </div>
+
+      <br><br>
       <div id="accordion">
   <div class="card">
     <div class="card-header" id="headingOne">
@@ -389,7 +411,7 @@ function showAll() {
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-        WordPress, Drupal, Adobe Creative Suite, HTML5, PHP, JavaScript, LAMP, MYSQL, CSS, SASS and LESS, Bootstrap
+        WordPress, Drupal, InVision, Adobe Experience Design, Sketch, Adobe Creative Suite, HTML5, PHP, JavaScript, LAMP, MYSQL, CSS, SASS and LESS, Bootstrap
       REST,SOAP, JSON, Twig, Docker, swagger, Google API’s, AWS, Ajax, jQuery, CloudFront CDN, bitbucket, Git , GitHub, Google Anlytics, Google AdWords, Google Tagmanager, Hubspot, Node.js, React, Visual Studio, SQL
       </div>
     </div>
@@ -407,6 +429,10 @@ function showAll() {
 <h4>Santanna Energy Services | Front End Developer <br> Austin,Tx. | 2017 - present</h4>
 
 <ul>
+  <li>Develop UI design mockups, storyboards, process flows, sitemaps, and prototypes that clearly illustrate site behaviors, requirements, and design.</li>
+<li>Works closely with Product Managers, Architects, and Developers to help deliver intuitive and easy to follow wireframes, mockups, workflows, and prototypes for a variety of projects across our product suite.</li>
+<li>Collaborate with Product and Engineering team to support the product development process - from conception to release.</li>
+<li>Perform UX research to obtain user feedback and improve products</li>
 <li>Design build, and maintain current and new websites I built in WordPress with Docker, phpMyAdmin, Portainer</li>
 <li>Develop a digital marketing roadmap that incorporates a website traffic plan with goals and benchmarks to achieve this</li>
 <li>	Regularly engage with company employees to support digital marketing efforts</li>
@@ -529,10 +555,24 @@ function showAll() {
     </div>
   </div>
 </div>
+<br>
+<div align="center">
+        <div class="row">
+
+    <div class="col-md">
+      <a style="margin-bottom:5px;" class="btn btn-secondary btn-xl js-scroll-trigger text-center" href="https://github.com/mrenfro"><i class="fab fa-github"></i>  Visit github</a>
+    </div>
+    <div class="col-md">
+      <a style="margin-bottom:5px;" class="btn btn-secondary btn-xl js-scroll-trigger text-center" href="https://mattrenfro.com/GTmetrix.pdf"><i class="fas fa-poll"></i> site report</a>
+    </div>
+    </div>
+  </div>
     </div>
 
   </section>
 
+
+  <hr class="divider my-8">
   <!-- Portfolio Section -->
   <section id="portfolio">
     <h2 class="text-center mt-0">Featured Latest Work</h2>
@@ -542,7 +582,7 @@ function showAll() {
       <div class="row no-gutters">
     <div class="col-lg-4 col-sm-3">
       <a class="portfolio-box" href="img/ses_desktop.jpg">
-        <img class="img-fluid" src="img/ses_desktop_sm.jpg" alt="">
+        <img class="img-fluid" src="img/ses_desktop_sm2.jpg" alt="">
         <div class="portfolio-box-caption">
 
           <div class="project-category text-white-50">
@@ -582,8 +622,9 @@ function showAll() {
         </div>
       </a>
     </div></div></div>
-
-    <h2 class="text-center mt-0">Web Dev Portfolio</h2>
+    <br>
+<hr class="divider my-4">
+    <h2 class="text-center mt-0">Web Portfolio</h2>
     <hr class="divider my-4">
     <br>
 
@@ -598,7 +639,7 @@ function showAll() {
                 website
               </div>
               <div class="project-name">
-                Santanna Energy Service - WordPress
+                santannaenergyservices.com - WordPress
               </div>
             </div>
           </a>
@@ -672,14 +713,17 @@ function showAll() {
     </div>
 <br>
   </section>
-
+  <br>
+<section id="code">
+  <hr class="divider my-4">
+  <h2 class="text-center mt-0">Code Sample</h2>
+  <hr class="divider my-4">
   <!-- Call to Action Section -->
   <section class="page-section bg-dark text-white">
     <div class="container text-center">
-      <h2 class="text-center mt-0">Code Sample from santannanergyservices, this was built using PHP, JSON and the Swagger API portal</h2>
-      <hr class="divider my-4">
+
       <div class="row">
-        <div class="col-lg-3"><h2 class="text-center mt-0">Get JSON PHP</h2>
+        <div class="col-lg"><h2 class="text-center mt-0">Get JSON with PHP</h2>
           <code class="text-white">
 <p class="text-left mt-0">$curl_handle = curl_init($url);
 curl_setopt($curl_handle, CURLOPT_URL,'https://jsonurl');
@@ -690,8 +734,9 @@ $query = curl_exec($curl_handle);
 $resultnicor3 = json_decode($query, true);
 curl_close($curl_handle);</p>
           </code></div>
-        <div class="col-lg-3">
-          <h2 class="text-center mt-0">Display JSON PHP</h2>
+          <div class="row">
+        <div class="col-lg">
+          <h2 class="text-center mt-0">Display JSON with PHP</h2>
           <code class="text-white">
             <br>
             <p class="text-left mt-0">
@@ -733,9 +778,10 @@ curl_close($curl_handle);</p>
               ["rateSegmentDetailList"][1]["rateAmount"]);
                 //at first layer ?>
                 <br></p>
-          </code></div>
-        <div class="col-lg-3">
-            <h2 class="text-center mt-0">My css</h2>
+          </code></div></div>
+              <div class="row">
+        <div class="col-lg">
+            <h2 class="text-center mt-0">CSS</h2>
             <code class="text-white">
               <br>
               <p class="text-left mt-0">
@@ -757,8 +803,9 @@ curl_close($curl_handle);</p>
                 text-overflow: ellipsis;
                 text-size-adjust: auto;
               }</p>
-</code></div>
-<div class="col-lg-3">
+</code></div></div>
+    <div class="row">
+<div class="col-lg">
     <h2 class="text-center mt-0">Compare Javascript</h2>
     <code class="text-white">
       <br>
@@ -792,10 +839,12 @@ function showAll() {
 	}
 
 }</p>
-</code></div>
-      </div>
+</code>
 </div>
-<h2 class="text-center">Result with new compare script</h2>
+</div>
+</div>
+</div>
+<h2 class="text-center">Result </h2>
 <div align="center">
 <input type="button" value="Compare Selected Plan" onclick="hideSelected();" /> <input type="button" value="Show All" onclick="showAll();" /></div>
 <br><br>
@@ -942,7 +991,7 @@ function showAll() {
 
   </section>
 </div>
-
+</section>
   <!-- Contact Section -->
   <section class="page-section" id="contact">
     <div class="container">
