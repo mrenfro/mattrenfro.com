@@ -1,0 +1,10 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+User-agent: Unnecessarybot
+Disallow: /
+
+Sitemap: https://mattrenfro.com/sitemap.xml
